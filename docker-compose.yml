@@ -1,0 +1,7 @@
+version: '3.7'
+
+services:
+  jts3servermod:
+    build: .
+    ports:
+      - "8000:80"
