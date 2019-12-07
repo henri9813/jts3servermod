@@ -2,9 +2,6 @@ version: '3.7'
 
 services:
   jts3servermod:
-    build: .
-    ports:
-      - "8000:80"
-    entrypoint: "tail -f /dev/null"
+    image: henri9813/jts3servermod
     volumes:
       - "./config:/app/config"
