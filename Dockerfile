@@ -9,6 +9,6 @@ RUN apt update \
 RUN wget -N "https://www.stefan1200.de/dlrequest.php?file=jts3servermod&type=.zip" -O "jts3servermod.zip" \
 	&& unzip jts3servermod.zip \
 	&& mv JTS3ServerMod/* . \
-	&& rm -rf JTS3ServerMod
+	&& rm -rf JTS3ServerMod *.exe jts3servermod.zip jts3servermod_startscript.sh
 
-ENTRYPOINT tail -f /dev/null
+ENTRYPOINT java -jar JTS3ServerMod.jar
